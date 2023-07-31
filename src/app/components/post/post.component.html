@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="container-post">
+        <h4><a [routerLink]="'/profile/'+post.author._id"><mat-icon>account_circle</mat-icon> {{ post.author.name }} {{ post.author.surname }}</a> | {{ post.created_at }}</h4>
+    
+        <p>{{ post.content }}</p>
+    
+        <button *ngIf="!liked" mat-raised-button color="primary" (click)="onLikeClick()" style="margin-right: 10px;"><mat-icon>thumb_up</mat-icon>Me gusta</button>
+        <button *ngIf="liked" mat-raised-button color="warn" (click)="onDislikeClick()" style="margin-right: 10px;"><mat-icon>thumb_down</mat-icon>Ya no me gusta</button>
+        <!-- <button mat-raised-button color="primary" style="margin-right: 10px;"><mat-icon>share</mat-icon>Compartir</button> -->
+        <button *ngIf="isLoggedInUser" mat-raised-button color="secondary" (click)="onEditClick()" style="margin-right: 10px;"><mat-icon>edit</mat-icon>Editar</button>
+        <button *ngIf="isLoggedInUser" mat-raised-button color="warn" (click)="onDeleteClick()" style="margin-right: 10px;"><mat-icon>delete</mat-icon>Eliminar</button>
+        <a [routerLink]="'/post/'+post._id" mat-raised-button color="primary" style="margin-right: 10px;"><mat-icon>comment</mat-icon>Comentarios</a>
+    </div>
+</div>

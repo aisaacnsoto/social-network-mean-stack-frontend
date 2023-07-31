@@ -1,0 +1,13 @@
+<h1 mat-dialog-title>Editar publicación</h1>
+<div mat-dialog-content>
+    <form [formGroup]="formGroup" style="margin-top: 20px;">
+        <mat-form-field appearance="outline">
+            <mat-label>Contenido</mat-label>
+            <input matInput formControlName="content" type="text">
+        </mat-form-field>
+    </form>
+</div>
+<div mat-dialog-actions>
+    <button mat-raised-button color="warn" mat-dialog-close>Cancelar</button>
+    <button mat-raised-button color="primary" [disabled]="formGroup.invalid" (click)="onActionClick()">Guardar</button>
+</div>

@@ -1,0 +1,16 @@
+<div *ngIf="userProfile">
+    <br>
+    <!-- <img src="" alt="Foto de perfil"> -->
+    <h2><mat-icon>account_circle</mat-icon> {{userProfile.name}} {{userProfile.surname}}</h2>
+
+    <p>
+        <button *ngIf="!isLoggedInUser && !follow" mat-raised-button color="primary" (click)="onFollowClick()"><mat-icon>person_add</mat-icon>Seguir</button>
+        <button *ngIf="!isLoggedInUser && follow" mat-raised-button color="warn" (click)="onUnfollowClick()"><mat-icon>person_remove</mat-icon>Dejar de seguir</button>
+        <a [routerLink]="'/profile/'+userProfile._id" mat-raised-button><mat-icon>feed</mat-icon>Publicaciones (0)</a>
+        <a [routerLink]="'/profile/'+userProfile._id+'/followers'" mat-raised-button><mat-icon>person</mat-icon>Seguidores (0)</a>
+        <a [routerLink]="'/profile/'+userProfile._id+'/following'" mat-raised-button><mat-icon>person</mat-icon>Siguiendo (0)</a>
+    </p>
+    <!-- <p>
+        <a *ngIf="isLoggedInUser" routerLink="edit" mat-raised-button color="primary"><mat-icon>edit</mat-icon>Editar perfil</a>
+    </p> -->
+</div>

@@ -1,0 +1,5 @@
+<mat-form-field appearance="outline">
+    <mat-label>Comenta algo ahora</mat-label>
+    <input matInput [(ngModel)]="query">
+</mat-form-field>
+<button mat-raised-button color="primary" [disabled]="emptyQuery" (click)="onPublishClick()"><mat-icon>send</mat-icon>Publicar</button>

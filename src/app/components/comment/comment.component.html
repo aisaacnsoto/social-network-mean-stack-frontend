@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="container-comment">
+        <h4><a routerLink="/profile/{{ comment.author._id }}"><mat-icon>account_circle</mat-icon> {{ comment.author.name }} {{ comment.author.surname }}</a> | {{ comment.created_at }}</h4>
+        
+        <p>{{ comment.content }}</p>
+        
+        <!-- <button mat-raised-button color="primary"><mat-icon>reply</mat-icon>Responder</button> -->
+        <!-- <button mat-raised-button color="secondary"><mat-icon>edit</mat-icon>Editar</button> -->
+        <button mat-raised-button color="warn" (click)="onDeleteClick()"><mat-icon>delete</mat-icon>Eliminar</button>
+    </div>
+</div>

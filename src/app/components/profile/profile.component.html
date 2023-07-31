@@ -1,0 +1,9 @@
+<!-- <p><img src="" alt="foto"></p> -->
+<p>
+    <mat-icon>account_circle</mat-icon>
+    <a *ngIf="follower" routerLink="/profile/{{follow.follower._id}}">{{follow.follower.name}} {{follow.follower.surname}}</a>
+    <a *ngIf="following" routerLink="/profile/{{follow.following._id}}">{{follow.following.name}} {{follow.following.surname}}</a>
+</p>
+
+<!-- <button mat-raised-button color="primary"><mat-icon>person_add</mat-icon>Seguir</button>
+<button mat-raised-button color="warn"><mat-icon>person_remove</mat-icon>Dejar de seguir</button> -->

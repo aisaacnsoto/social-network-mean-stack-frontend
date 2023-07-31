@@ -1,0 +1,19 @@
+<h2>Inicio de sesión</h2>
+<form [formGroup]="formGroup">
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Correo electónico</mat-label>
+            <input formControlName="email" matInput type="email">
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Contraseña</mat-label>
+            <input formControlName="password" matInput type="password">
+        </mat-form-field>
+    </p>
+    <p>
+        <button mat-raised-button color="primary" [disabled]="formGroup.invalid" (click)="onLoginClick()"><mat-icon>login</mat-icon>Iniciar sesión</button>
+    </p>
+</form>
+<p>¿No tienes una cuenta? <span><a routerLink="/register">Regístrate aquí</a></span></p>

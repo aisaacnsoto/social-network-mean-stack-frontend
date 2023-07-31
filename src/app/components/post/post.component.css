@@ -1,0 +1,13 @@
+.container {
+    background-color: gainsboro;
+    border-radius: 20px;
+    margin: 0 auto;
+    width: 70%;
+    
+    
+}
+
+.container-post {
+    margin: 20px;
+    padding: 20px;
+}

@@ -1,0 +1,13 @@
+.container {
+    background-color: rgb(255, 194, 194);
+    border-radius: 20px;
+    margin: 0 auto;
+    width: 70%;
+    
+    
+}
+
+.container-comment {
+    margin: 20px;
+    padding: 20px;
+}

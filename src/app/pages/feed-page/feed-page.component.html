@@ -1,0 +1,5 @@
+<h1>¡Bienvenido(a), {{currenUser.name}}!</h1>
+<br>
+<app-publish-now (submit)="onPublishSubmit($event)"></app-publish-now>
+
+<app-feed-section *ngIf="posts" [posts]="posts" (delete)="onDeleteClick($event)" (edit)="onEditClick($event)"></app-feed-section>

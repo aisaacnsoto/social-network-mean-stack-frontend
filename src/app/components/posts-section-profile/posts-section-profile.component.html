@@ -1,0 +1,7 @@
+<app-profile-header-section *ngIf="user" [userProfile]="user"></app-profile-header-section>
+
+<h3>PUBLICACIONES</h3>
+
+<app-publish-now (submit)="onPublishNowClick($event)"></app-publish-now>
+
+<app-post [post]="item" *ngFor="let item of posts" (delete)="onDeleteClick($event)" (edit)="onEditClick($event)"></app-post>

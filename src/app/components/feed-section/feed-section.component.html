@@ -1,0 +1,3 @@
+<h2>Publicaciones recientes</h2>
+
+<app-post [post]="item" *ngFor="let item of posts" (delete)="onDeleteClick($event)" (edit)="onEditClick($event)"></app-post>

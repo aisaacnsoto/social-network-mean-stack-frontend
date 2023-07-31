@@ -1,0 +1,7 @@
+<app-post *ngIf="post" [post]="post"></app-post>
+<br><br>
+<h3>Comentarios</h3>
+
+<app-comment-now *ngIf="post" [post]="post" (submit)="onCommentSubmit()"></app-comment-now>
+
+<app-comment [comment]="comment" *ngFor="let comment of comments" (delete)="onCommentDelete()"></app-comment>

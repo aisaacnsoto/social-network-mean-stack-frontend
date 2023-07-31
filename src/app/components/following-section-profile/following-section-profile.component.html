@@ -1,0 +1,5 @@
+<app-profile-header-section *ngIf="user" [userProfile]="user"></app-profile-header-section>
+
+<h3>Siguiendo</h3>
+
+<app-profile [follow]="item" *ngFor="let item of follows" [following]="true"></app-profile>
