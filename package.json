@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build && xcopy /y .htaccess dist\\frontend",
+    "build": "ng build && node copy-file.js",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
