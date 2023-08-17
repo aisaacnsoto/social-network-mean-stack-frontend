@@ -9,7 +9,7 @@ import { AuthService } from './auth.service';
 })
 export class PostService {
 
-  private API_URL = 'http://localhost:9000';
+  private API_URL = 'https://social-network-mean-stack-backend.onrender.com';
   private headers = new HttpHeaders({
     'Authorization': this._authService.getToken()
   });

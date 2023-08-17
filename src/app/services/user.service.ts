@@ -8,7 +8,7 @@ import { User } from '../models/user.model';
 })
 export class UserService {
 
-  private API_URL = 'http://localhost:9000';
+  private API_URL = 'https://social-network-mean-stack-backend.onrender.com';
 
   constructor(private _http: HttpClient) { }
 

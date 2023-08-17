@@ -8,7 +8,7 @@ import { tap } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class AuthService {
-  private API_URL = 'http://localhost:9000'; // Reemplaza con la URL de tu API en el servidor
+  private API_URL = 'https://social-network-mean-stack-backend.onrender.com'; // Reemplaza con la URL de tu API en el servidor
   private loggedIn = new BehaviorSubject<boolean>(false);
   private redirectUrl = '/';
 
